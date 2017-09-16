@@ -92,7 +92,6 @@ class HTMLElement extends PureComponent {
       const styleset = RNElem === Text ? HTMLStyles.STYLESETS.TEXT : HTMLStyles.STYLESETS.VIEW
       const style = []
     .concat(
-      HTMLStyles.defaultStyles[tagName],
       htmlStyles ? htmlStyles[tagName] : undefined,
       htmlAttribs.style ? HTMLStyles.cssStringToRNStyle(htmlAttribs.style, styleset) : undefined
     ).filter((s) => s !== undefined)
