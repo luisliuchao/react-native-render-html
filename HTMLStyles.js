@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native'
 import PropTypes from 'prop-types'
 
 // We have to do some munging here as the objects are wrapped
@@ -66,14 +65,13 @@ class HTMLStyles {
 
   /**
   * Generates the default styles
-  * @return the stylesheet
   */
   _generateDefaultStyles () {
   // These styles are mainly adapted from
   // https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
 
     const BASE_FONT_SIZE = 14
-    return StyleSheet.create({
+    return {
       // Block level elements
       div: { },
 
@@ -132,7 +130,7 @@ class HTMLStyles {
         fontSize: BASE_FONT_SIZE * 0.8,
         marginBottom: BASE_FONT_SIZE / 2
       }
-    })
+    }
   }
 
   /* ****************************************************************************/
